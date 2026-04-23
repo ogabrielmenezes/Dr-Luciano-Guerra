@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors - Dr. Luciano Guerra Brand */
+  --color-primary: #25536A;
+  --color-primary-dark: #123450;
+  --color-accent: #40858C;
+  --color-gold: #A68051;
+  --color-gold-light: #B99E67;
+  
+  /* Semantic colors */
+  --color-background: #FFF4EA;
+  --color-foreground: #123450;
+  --color-muted: #6B7280;
+  --color-muted-foreground: #9CA3AF;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #123450;
+  --color-border: #E5E7EB;
+  
+  /* Fonts */
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --font-serif: "Aleo", "Georgia", serif;
+  
+  /* Radius */
+  --radius: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  
+  /* Animations */
+  --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography utilities */
+.font-display {
+  font-family: var(--font-serif);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-dark);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
